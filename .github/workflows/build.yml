@@ -2,7 +2,7 @@ name: CI
 
 on:
   pull_request:
-    branches: [main]
+    branches: [ master ]
 
     workflow_dispatch:
 
@@ -17,6 +17,5 @@ jobs:
       -user: actions/setup-java@v1.4.3
       with:
         java-version: ${{ env.JAVA_VERSION }}
-          - name: Maven Clean Package
-            run: |
-              ./mvnw --no-transfer-progress clean package
+          - name: Build with Maven
+            run: mvn -B clean test
