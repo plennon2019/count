@@ -6,7 +6,7 @@ public class Counter {
     public Counter() {
         countValue = 0;
     }
-
+//add number
     public int increment()
     {
         countValue++;
