@@ -27,10 +27,17 @@ class CounterTest {
     }
 
     @Test
-    void testConstructor()
+    void testConstructorFail()
     {
       Exception exMessage = assertThrows(IllegalArgumentException.class, () -> { new Counter(4);});
       assertEquals("This is not a valid number", exMessage.getMessage());
+    }
+
+    //@Test
+    void testConstructorSuccess()
+    {
+        Counter newCounter = new Counter(6);
+        assertEquals(6, newCounter.getCount());
     }
 
     @AfterEach
