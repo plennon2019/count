@@ -1,4 +1,4 @@
-package ie.atu.week5;
+package ie.atu.week10;
 
 public class Counter {
     private int countValue;
